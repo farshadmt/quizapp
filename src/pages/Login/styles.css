@@ -1,0 +1,78 @@
+.login-form{
+    border: 2px dotted #a5a2a2;
+    height:80%;
+    width:35%;
+    background-color: rgb(143, 250, 212);
+    border-radius: 20px;
+    
+    
+}
+.Formdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+}
+.page-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-image: url('../../../assets/login_background.png');
+    background-size: cover;
+    background-position: center;
+}
+.cartoon-effect {
+    font-family: 'Chewy', cursive;
+    font-size: 60px;
+    color: #FFCC00; /* Bright yellow */
+    text-shadow: 3px 3px 0px #FF0000; /* Red shadow */
+    transform: rotate(-4deg);
+}
+.emailcartoon-effect {
+    font-family: 'Chewy', cursive;
+    font-size: 50px;
+    color: #f131e8; /* Bright yellow */
+    text-shadow: 3px 3px 0px #0f033b; /* Red shadow */
+    transform: rotate(-2deg);
+}
+.Input-style{
+    height: 50px;
+    width: 320px;
+    transform: rotate(-2deg);
+}
+.field-container{
+    display:flex;
+    justify-content:space-between;
+    padding:0px 40px;
+    align-items:center
+}
+.title-name{
+    padding-top: 40px;
+    line-height: 80px;
+}
+.cartoon-button {
+    background-color: #FFCC00; /* Bright yellow */
+    color: #FFFFFF; /* White text */
+    font-family: 'Bangers', cursive; /* Fun font */
+    font-size: 45px;
+    padding: 15px 30px;
+    border: 2px solid #FF5733; /* Orange border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 5px 5px 0px #FF5733; /* Shadow for depth */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation effects */
+    transform: rotate(-4deg);
+    width: 80%;
+}
+
+.cartoon-button:hover {
+    transform: translateY(-30px); /* Lift effect on hover */
+    box-shadow: 8px 8px 0px #FF5733; /* Deepen shadow on hover */
+}
+
+.cartoon-button:active {
+    transform: translateY(20px); /* Slight press effect */
+    box-shadow: 5px 5px 0px #FF5733; /* Reset shadow */
+}
