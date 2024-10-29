@@ -1,11 +1,9 @@
 .login-form{
     border: 2px dotted #a5a2a2;
-    height:80%;
-    width:35%;
-    background-color: rgb(143, 250, 212);
-    border-radius: 20px;
-    
-    
+    height:90%;
+    width:40%;
+    background: -webkit-linear-gradient(left, #87e2de, #02ebdf,#87e2de, #23bce2);
+    border-radius: 20px; 
 }
 .Formdiv{
     display: flex;
@@ -32,15 +30,17 @@
 }
 .emailcartoon-effect {
     font-family: 'Chewy', cursive;
-    font-size: 50px;
+    font-size: 40px;
     color: #f131e8; /* Bright yellow */
     text-shadow: 3px 3px 0px #0f033b; /* Red shadow */
     transform: rotate(-2deg);
 }
 .Input-style{
     height: 50px;
-    width: 320px;
+    width: 400px;
     transform: rotate(-2deg);
+    font-size: 28px;
+    font-family: 'Chewy', cursive;
 }
 .field-container{
     display:flex;
@@ -75,4 +75,110 @@
 .cartoon-button:active {
     transform: translateY(20px); /* Slight press effect */
     box-shadow: 5px 5px 0px #FF5733; /* Reset shadow */
+}
+
+.moving-email {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    box-sizing: border-box; /* Include padding/border in width calculation */
+    animation: moveemail 10s linear infinite; /* Animate over 10 seconds, loop infinitely */
+  }
+  .moving-password {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    box-sizing: border-box; /* Include padding/border in width calculation */
+    animation: movepassword 5s linear infinite; /* Animate over 10 seconds, loop infinitely */
+  }
+  .moving-cnfrmpassword {
+    white-space: nowrap; /* Prevent text from wrapping */
+
+    box-sizing: border-box; /* Include padding/border in width calculation */
+    animation: movecnfrmpassword 5s linear infinite; /* Animate over 10 seconds, loop infinitely */
+  }
+  
+  @keyframes moveemail {
+    0% {
+        transform: translateX(60%); /* Start off-screen to the right */
+      }
+      50% {
+        transform: translateX(40%); /* Move to the left just before off-screen */
+      }
+      100% {
+        transform: translateX(60%); /* Reset back to starting position */
+      }
+      
+  }
+  @keyframes movepassword {
+    0% {
+        transform: translateX(80%); /* Start off-screen to the right */
+      }
+      50% {
+        transform: translateX(60%); /* Move to the left just before off-screen */
+      }
+      100% {
+        transform: translateX(80%); /* Reset back to starting position */
+      }
+      
+  }
+  @keyframes movecnfrmpassword {
+    0% {
+        transform: translateX(-5%); /* Start off-screen to the right */
+      }
+      50% {
+        transform: translateX(-10%); /* Move to the left just before off-screen */
+      }
+      100% {
+        transform: translateX(-5%); /* Reset back to starting position */
+      }
+      
+  }
+
+  .shaking-name {
+    animation: shake 0.5s infinite; /* Animate the shake effect */
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0); /* Start and end in original position */
+    }
+    25% {
+      transform: translateY(-5px); /* Move left */
+    }
+    50% {
+      transform: translateX(5px); /* Move right */
+    }
+    75% {
+      transform: translateY(-5px); /* Move left again */
+    }
+  }
+  
+
+  .title-form {
+    padding: 30px 30px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-around; /* Space buttons evenly */
+    align-items: center; /* Center buttons vertically */
+}
+
+.cartoon-form-button { 
+    background-color: #ca7f38; /* Bright yellow */
+    color: #FFFFFF; /* White text */
+    font-family: 'Bangers', cursive; /* Fun font */
+    font-size: 25px;
+    padding: 15px 30px;
+    border: 2px solid #d89586; /* Orange border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 5px 5px 0px #160805; /* Shadow for depth */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation effects */
+    transform: rotate(-2deg);
+    width: 40%; /* Adjust width as needed */
+}
+
+.cartoon-form-button:hover {
+    transform: translateY(-30px); /* Lift effect on hover */
+    box-shadow: 8px 8px 0px #FF5733; /* Deepen shadow on hover */
+}
+.active{
+    background-color: #FF0000;
 }
