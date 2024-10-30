@@ -157,7 +157,8 @@
     padding: 30px 30px;
     display: flex; /* Use flexbox for alignment */
     justify-content: space-around; /* Space buttons evenly */
-    align-items: center; /* Center buttons vertically */
+     /* Center buttons vertically */
+    position: relative;
 }
 
 .cartoon-form-button { 
@@ -173,12 +174,32 @@
     transition: transform 0.2s, box-shadow 0.2s; /* Animation effects */
     transform: rotate(-2deg);
     width: 40%; /* Adjust width as needed */
+    left: 60%;
+    position: absolute;
+    transition: left 0.5s ease;
 }
+
 
 .cartoon-form-button:hover {
     transform: translateY(-30px); /* Lift effect on hover */
     box-shadow: 8px 8px 0px #FF5733; /* Deepen shadow on hover */
 }
-.active{
-    background-color: #FF0000;
+
+.cartoon-form-button.active{
+  background-color: #FF0000;
+  left: 0%;
+}
+
+
+.login-form.active{
+  background: -webkit-linear-gradient(left, #105854, #1d948e,#0e8e88, #00c0f0);
+}
+.loged-user{
+  color: #0f033b;
+  font-family: 'Chewy', cursive;
+}
+.loged-text{
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
 }
