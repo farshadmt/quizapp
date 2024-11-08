@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
 import boy from "../../assets/validationboy.png"
+import fetchApi from "../../api/Login/index"
 
 const LoginForm = ({Setpagerender}) => {
   const [loginusername, setUsername] = useState('');
@@ -19,24 +20,31 @@ const LoginForm = ({Setpagerender}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     debugger;
-    if (validatePassword(loginpassword)) {
-      // Handle successful submission
-      console.log('Password is valid:', loginpassword);
-      setError('');
-    } else {
-      setError('Password must be at least 6 characters long and contain at least one number.');
-    }
     // Basic validation
     if (!loginusername || !loginpassword) {
       setError('Both fields are required.');
       return;
     }
-    fetch('https://dummyjson.com/users')
-      .then(res => res.json())
-      .then(console.log);
-    // Here you would typically send a request to your API for authentication
+    if (validatePassword(loginpassword)) {
+      // Handle successful submission
+      console.log('Password is valid:', loginpassword);
+      setError('');
+      debugger;
+      const response = fetchApi(loginusername,loginpassword)
+      if (response.message){
+        debugger;
+        Setpagerender(false);
+      }
+      else{
+
+      }
+      
+    } else {
+      setError('Password must be at least 6 characters long and contain at least one number.');
+    }
+    
     console.log('Logging in with:', { loginusername, loginpassword });
-    Setpagerender(false);
+    
 
   };
   const handleButtonClick = (button) => {
